@@ -9,7 +9,10 @@
 		"preview": "astro preview",
 		"astro": "astro",
 		"lint": "biome check .",
-		"lint:fix": "biome check --write ."
+		"lint:fix": "biome check --write .",
+		"test": "vitest --run",
+		"test:watch": "vitest",
+		"prepare": "husky"
 	},
 	"dependencies": {
 		"@astrojs/mdx": "^4.3.4",
@@ -22,6 +25,8 @@
 		"typescript": "^5.9.2"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^2.2.0"
+		"@biomejs/biome": "^2.2.0",
+		"husky": "^9.1.7",
+		"vitest": "^3.2.4"
 	}
 }
