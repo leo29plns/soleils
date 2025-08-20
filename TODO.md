@@ -1,0 +1,1 @@
+- [ ] Créer un fichier de base HTML commun à toutes les pages
