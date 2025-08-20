@@ -1,1 +1,2 @@
 - [ ] Créer un fichier de base HTML commun à toutes les pages
+- [ ] Ajouter les pages d'erreur
