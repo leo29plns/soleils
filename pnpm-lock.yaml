@@ -24,7 +24,7 @@ importers:
         specifier: ^5.13.2
         version: 5.13.2(@types/node@24.3.0)(rollup@4.46.4)(typescript@5.9.2)
       sharp:
-        specifier: ^0.34.2
+        specifier: ^0.34.3
         version: 0.34.3
       svelte:
         specifier: ^5.38.2
