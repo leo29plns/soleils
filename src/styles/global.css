@@ -171,3 +171,8 @@ header {
 footer {
 	margin-block-start: 4em;
 }
+
+::view-transition-group(*) {
+	animation-duration: 500ms;
+	animation-timing-function: ease;
+}
