@@ -12,11 +12,12 @@ body {
 	text-rendering: optimizeLegibility;
 	font-kerning: normal;
 	text-wrap: pretty;
+	transition: all 125ms ease;
 }
 
 @media (max-width: 37.5rem) {
 	body {
-		padding: 0.75rem;
+		padding: 1rem;
 	}
 
 	h1 {
