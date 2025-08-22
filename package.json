@@ -4,14 +4,15 @@
 	"version": "0.0.1",
 	"packageManager": "pnpm@10.11.0",
 	"scripts": {
-		"dev": "astro dev",
-		"build": "astro build",
+		"dev": "pnpm run pagefind:dev && astro dev",
+		"build": "astro build && pagefind --site dist",
 		"preview": "astro preview",
 		"astro": "astro",
 		"lint": "biome check .",
 		"lint:fix": "biome check --write .",
 		"test": "vitest --run",
 		"test:watch": "vitest",
+		"pagefind:dev": "astro build --outDir temp && pagefind --site temp && rm -rf public/pagefind && cp -r temp/pagefind public/ && rm -rf temp/",
 		"prepare": "husky"
 	},
 	"dependencies": {
@@ -27,6 +28,7 @@
 	"devDependencies": {
 		"@biomejs/biome": "^2.2.0",
 		"husky": "^9.1.7",
+		"pagefind": "^1.3.0",
 		"vitest": "^3.2.4"
 	}
 }
