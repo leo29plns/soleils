@@ -10,21 +10,29 @@ const posts = (await getCollection('blog')).sort(
 ---
 
 <Base>
-	<section>
-		{
-			posts.map((post) => (
-				<article>
-					<a href={`/blog/${post.id}/`}>
-						{post.data.heroImage && (
-							<Image width={720} height={360} src={post.data.heroImage} alt="" />
-						)}
-						<h4 class="title">{post.data.title}</h4>
-						<p class="date">
-							<FormattedDate date={post.data.pubDate} />
-						</p>
-					</a>
-				</article>
-			))
-		}
-	</section>
+	{
+		posts.map((post) => (
+			<article>
+				<a href={`/blog/${post.id}/`}>
+					{post.data.heroImage && (
+						<Image src={post.data.heroImage} width="600" height="300" transition:name={post.data.heroImage.src} alt="" />
+					)}
+					<h1 class="title">{post.data.title}</h1>
+					<p class="date">
+						<FormattedDate date={post.data.pubDate} />
+					</p>
+				</a>
+			</article>
+		))
+	}
 </Base>
+
+<style>
+	article {
+		margin-bottom: 4rem;
+
+		h1, p {
+			margin-block: 0.5em;
+		}
+	}
+</style>

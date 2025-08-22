@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/correctness/noUnknownTypeSelector: View transitions */
 html {
 	color: #1a1a1a;
 	background-color: #fdfdfd;
@@ -54,14 +55,10 @@ p {
 	margin-block: 1em;
 }
 
+svg,
 img {
-	max-width: 100%;
-	object-fit: cover;
-}
-
-svg {
 	height: auto;
-	max-width: 100%;
+	width: 100%;
 }
 
 h1,
@@ -175,4 +172,10 @@ footer {
 ::view-transition-group(*) {
 	animation-duration: 500ms;
 	animation-timing-function: ease;
+}
+
+::view-transition-old(*):only-child,
+::view-transition-new(*):only-child,
+::view-transition-group(root) {
+	animation-duration: 0ms;
 }
